@@ -9,9 +9,10 @@ class Reg_MCP(unittest.TestCase):
         self.driver = webdriver.Chrome()
 
     def test_mcp(self):
-        user = "AbeerM"
-        fname = "Abeer"
-        mail = "barun120@uno.com"
+        user = "Romana"
+        fname = "Romana"
+        lname = "Shah"
+        mail = "roma100@uno.com"
         pwd1 = "arun100"
         pwd2 = "arun100"
         driver = self.driver
@@ -25,6 +26,8 @@ class Reg_MCP(unittest.TestCase):
         elem.send_keys(user)
         elem = driver.find_element_by_name("first_name")
         elem.send_keys(fname)
+        elem = driver.find_element_by_name("last_name")
+        elem.send_keys(lname)
         elem = driver.find_element_by_name("email")
         elem.send_keys(mail)
         elem = driver.find_element_by_name("password")
